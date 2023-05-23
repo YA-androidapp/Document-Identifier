@@ -160,6 +160,10 @@ UUIDとの128ビット互換性を持つ、辞書順にソート可能な、ミ�
 
 ## Cuid2
 
+- [paralleldrive/cuid](https://github.com/paralleldrive/cuid)
+
+> c(固定値) - {Timestamp} - {Counter} - {Client fingerprint} - {Random}
+
 ---
 
 Copyright (c) 2023 YA-androidapp(https://github.com/YA-androidapp) All rights reserved.
