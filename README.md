@@ -10,18 +10,18 @@
 
 # 階層
 
-| 項目   |       |     |      |
-| ------ | ----- | --- | ---- |
-| 識別子 |       |     |      |
-|        | URI   |     |      |
-|        |       | URL |      |
-|        |       | URN |      |
-|        |       |     | UUID |
-|        |       |     |      |
-|        | ULID  |     |      |
-|        | Cuid2 |     |      |
-|        |       |     |      |
-|        |       |     |      |
+| 項目   |         |     |      |
+| ------ | ------- | --- | ---- |
+| 識別子 |         |     |      |
+|        | URI     |     |      |
+|        |         | URL |      |
+|        |         | URN |      |
+|        |         |     | UUID |
+|        |         |     |      |
+|        | Cuid2   |     |      |
+|        | Nano ID |     |      |
+|        | ULID    |     |      |
+|        |         |     |      |
 
 ---
 
@@ -148,6 +148,27 @@
 - グレゴリオ暦ベース (60 bit)…　1582年10月15日からの100ナノ秒数
 - ミリ秒Unixタイムスタンプ（エポックミリ秒）…　1970年1月1日からのミリ秒数
 
+## Cuid2
+
+- [paralleldrive/cuid2](https://github.com/paralleldrive/cuid2)
+- [paralleldrive/cuid](https://github.com/paralleldrive/cuid)
+
+> c(固定値) {Timestamp} {Counter} {Client fingerprint} {Random}
+
+| 正規表現        | C#                                                        | Java                                                                  | JavaScript                                                    | PHP                                                         |
+| --------------- | --------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
+| `c[a-z0-9]{24}` | [visus-io/cuid.net](https://github.com/visus-io/cuid.net) | [thibaultmeyer/cuid-java](https://github.com/thibaultmeyer/cuid-java) | [paralleldrive/cuid2](https://github.com/paralleldrive/cuid2) | [visus-io/php-cuid2](https://github.com/visus-io/php-cuid2) |
+
+## Nano ID
+
+- [ai/nanoid](https://github.com/ai/nanoid)
+
+乱数のみをBase64エンコード
+
+| 正規表現            | C#                                                        | Java                                                    | JavaScript                                | PHP                                                           | Python                                                  |
+| ------------------- | --------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
+| `[A-Za-z0-9_-]{21}` | [codeyu/nanoid-net](https://github.com/codeyu/nanoid-net) | [aventrix/jnanoid](https://github.com/aventrix/jnanoid) | [ai/nanoid](https://github.com/ai/nanoid) | [hidehalo/nanoid-php](https://github.com/hidehalo/nanoid-php) | [puyuan/py-nanoid](https://github.com/puyuan/py-nanoid) |
+
 ## ULID
 
 - [ulid/spec](https://github.com/ulid/spec)
@@ -161,17 +182,6 @@ UUIDとの128ビット互換性を持つ、辞書順にソート可能な、ミ�
 | 正規表現                        | C#                                                                                                                     | Java                                        | JavaScript                                            | PHP                                                                     | PowerShell                                                          | Python                                                                                                           |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `[0-9a-hjkmnp-zA-HJKMNP-Z]{26}` | [RobThree/NUlid](https://github.com/RobThree/NUlid) <br> [mcb2001/CSharp.Ulid](https://github.com/mcb2001/CSharp.Ulid) | [azam/ulidj](https://github.com/azam/ulidj) | [ulid/javascript](https://github.com/ulid/javascript) | [Lewiscowles1986/php-ulid](https://github.com/Lewiscowles1986/php-ulid) | [PetterBomban/posh-ulid](https://github.com/PetterBomban/posh-ulid) | [ahawker/ulid](https://github.com/ahawker/ulid) <br> [mdomke/python-ulid](https://github.com/mdomke/python-ulid) |
-
-## Cuid2
-
-- [paralleldrive/cuid2](https://github.com/paralleldrive/cuid2)
-- [paralleldrive/cuid](https://github.com/paralleldrive/cuid)
-
-> c(固定値) {Timestamp} {Counter} {Client fingerprint} {Random}
-
-| 正規表現        | C#                                                        | Java                                                                  | JavaScript                                                    | PHP                                                         |
-| --------------- | --------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
-| `c[a-z0-9]{24}` | [visus-io/cuid.net](https://github.com/visus-io/cuid.net) | [thibaultmeyer/cuid-java](https://github.com/thibaultmeyer/cuid-java) | [paralleldrive/cuid2](https://github.com/paralleldrive/cuid2) | [visus-io/php-cuid2](https://github.com/visus-io/php-cuid2) |
 
 ---
 
